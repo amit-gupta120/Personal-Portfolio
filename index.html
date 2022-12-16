@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+           <img src="images/amit-2.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact Me</a></li> 
+          </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front-End Developer</p>
+            <h1>Hi,I'm <span>Amit</span><br>Gupta from India</h1> 
+        </div>
+      </div>
+    </div>
+<!-- ---------------About--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/amit.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A budding web developer.Seeking a position with an organisation where I can contribute to organisation's success and synchronize with the new technology while being resourceful,innovative and flexible. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Eduaction</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span><br></li>
+                            <li><span>CSS</span><br></li>
+                            <li><span>JavaScript</span><br></li>
+                            <li><span>React JS</span><br></li>
+                            <li><span>MySQL</span><br></li>
+                            <li><span>Python</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>React Intern at TCZ Digital Pvt. Ltd.</li>
+                            <li><span>08/2021-09/2021</span><br>IoT Training at Indeyes Infotech</li>
+                        </ul>
+                            
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018-2022</span><br>B.Tech(Hons) in Electronics and Communication Engineering<br>Oriental Institute of Science & Technology,Bhopal</li>
+                            <li><span>2015-2017</span><br>Seinor Secondary School<br>Grizzly Vidyalaya,Koderma</li>
+                            <li><span>upto 2015</span><br>Secondary School<br>PVSS DAV Public School,Koderma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------services---------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+             <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci omnis tempore fuga commodi deserunt doloremque quia odit, suscipit dicta voluptatibus explicabo! Modi quod magni eos omnis cupiditate dignissimos saepe illum?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, assumenda. Rerum dolorem doloribus fugiat modi nihil magnam non, ab hic, quam praesentium dignissimos. Quia, perspiciatis dignissimos consequatur voluptates atque dicta?</>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>IoT Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, assumenda. Rerum dolorem doloribus fugiat modi nihil magnam non, ab hic, quam praesentium dignissimos. Quia, perspiciatis dignissimos consequatur voluptates atque dicta?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------portfolio---------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+             for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+             }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+  </body>
+</html>
